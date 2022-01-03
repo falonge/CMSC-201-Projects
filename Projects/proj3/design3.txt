@@ -1,0 +1,44 @@
+def make_board(board_file):
+    Make a new list for the board
+    For each line in board_file:
+    	make a list for the new line
+	for each character in the line
+	    add the character to the new line line
+	add the new line to the board list
+    return the 2d list
+
+def fill_board(board_list):
+    for loop that goes through the board in list form:
+    	if the current character is a "+" and the last character was an "O":
+	   change the plus into an "O"
+	elif (repeat if the character is an "X")
+    another loop that goes through the board in list form:
+    	if the current character is a "+" and the next character is an "O":
+	   change the plus into an "O"
+	   call the fill_board() again
+	elif (repeat if the character is an "X"):
+    return board_list
+									       def print_board(board_list):
+    This will print the board with the proper formatting using a for loop
+									       def get_scores(board_list):
+    x_count = 0
+    o_count = 0
+    for loop goes throuigh board_list
+        if the current character is an "O"
+	    x_count += 1
+	elif (repeat if the character is an "X"):
+    return the x count and o count
+
+
+if __name__ ==  "__main__":
+   board = open(input("Board file name: "))
+   print("We are scoring this board:")
+   board = (make_board(board))
+   print_board(board)
+   print("\nThis is the colored board:")
+   board = fill_board(board)
+   print_board(board)
+   scores = get_scores(board)
+   print("\nBlack scored:", scores[0])
+   print("White scored:", scores[1])
+   

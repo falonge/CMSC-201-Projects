@@ -1,0 +1,77 @@
+def arrange_line(point_1, point_2)
+    if point_1 < point 2:
+       return [point_1, point_2]
+    else:
+	return [point_2, point_1]
+
+def line_is_copy(line. line_list):
+    if line in line_list:
+       return true
+    else:
+	return false
+
+def made_a_triangle(line_list)
+    line_combinations = (A list of all the possible triangle combinations)
+    for i in range(len(line_combinations):
+    	     counter = 0
+    	for j in range(len(line_combinations[i]):
+	    if line_combinations[i][j] in line_list
+	    counter += 1
+	if counter = 3:
+	   return true
+    return false
+
+def check_input(line):
+    if int(line[0]) not in valid_lines or int(line[2]) not in valid_lines:
+       print(Please pick a number between 1 and 6)
+           return false
+    elif line[0] = line[2]:
+    	 print(You cant draw a line to itself)
+	 return false
+    elif line[1] != " " or len(line) > 3:
+         print(Invalid format. To make a line type 2 numbers with a space between)
+         return false
+     else:
+	p1_new_line = arrange_line(int(line[0]), int(line[0]))
+	if line_is_copy(line, p1_lines):
+	   print(You cant make a new line over a preexistiing line)
+	   return false
+	elif line_is_copy(line, p2_lines):
+	     print(You cant make a line over a player 2's line)
+	     return false
+	else:
+		return true
+
+def take_turn():
+    if player_turn = 1:
+       correct_input = false
+       while correct_input = false
+       	     p1_new_line = input(Enter a line for player 1)
+	     correct_input = check_input(p1_new_line)
+       p1_lines.append(p1_new_line)
+       print_board(p1_lines, p1_character, p2_lines, p2_character):
+       if made_a_triangle(p1_lines)
+       	  return true
+       player_turn = 2
+       return false
+    elif player_turn = 2
+       (repeat above code for player 2)
+
+
+def play_sim():
+p1_character = input(What character would you like to use)
+p2_character = input(What character would you like to use)
+p1_lines = []
+p2_lines = []
+valid_lines = [1,2,3,4,5,6]
+while p1 and p2 have the same character:
+      print(You cant have the same character as p1)
+      p2_character = input(What character would you like to use)
+game_over = false
+player_turn = 1
+while game_over = false:
+      game_over = take_turn()
+
+
+if __name__ == "__main__":
+   play_sim()

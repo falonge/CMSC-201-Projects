@@ -1,0 +1,110 @@
+"""
+File:    design1.py
+Author:  Fey Alonge
+Date:    10/14/2019
+Section: 33
+E-mail:  falonge1@umbc.edu
+Description:
+  Bakery game. Player must buy enough ingredients to bake items wihtout going over their budget, and then they must bake them in the right order.
+"""
+
+STARTING_FUNDS = 80.0
+FLOUR_COST = 2.5
+EGGS_COST = 1.9
+YEAST_COST = 3.25
+BUTTER_COST = 1.25
+MILK_COST = 2.75
+GALLONS_MILK_PER_JUG = 1.0
+EGGS_PER_CRATE = 24.0
+TBSP_BUTTER_PER_PACK = 64.0
+CUPS_FLOUR_PER_BAG = 25.0
+CUP_YEAST_PER_BAG = 6.0
+FLOUR_REQUIRED = 48.0 + 112.5
+EGGS_REQUIRED = 12.0 + 60.0
+BUTTER_REQUIRED = 144.0
+YEAST_REQUIRED = 39 + 50
+MILK_REQUIRED = 18.0
+CUPS_IN_GALLON = 16
+TSP_IN_CUP = 48
+TSP_YEAST_PER_BAG = CUP_YEAST_PER_BAG * TSP_IN_CUP
+CUPS_MILK_PER_GALLON = GALLONS_MILK_PER_JUG * CUPS_IN_GALLON
+
+def is_valif_input(index,tasks):
+    if index > length of tasks
+       return False
+    else
+	return True
+
+def check_items_enough(shopping_cart):
+    if FLOUR_BAGS_REQUIRED = shopping_cart [0] and EGG_CRATES_REQUIRED = shopping_cart[1] and BUTTER_PACKS_REQUIRED  = shopping_cart[2] and YEAST_BAGS_REQUIRED  = shopping_cart[3] and MILK_JUGS_REQIURED = shopping_cart[4]
+       print "We have everything we need"
+       return true
+       if they dont have enough flour
+       	  print "You didnt buy enough flower. we needed',FLOUR_BAGS_REQUIRED - current flour, "more cups."
+       elif (repeat this code for all ingredients)
+										      print "You didnt buy enough stuff"
+       return false
+
+def go_shopping()
+    current_budget = STARTING_FUNDS
+    current_flour = 0
+    current_eggs = 0
+    current_butter = 0
+    current_yeast = 0
+    current_milk = 0
+    shopping_cart = [current_flour, current_eggs, current_butter, current_yeast, current_milk]
+    while user doesnt enter "nothing"
+    	  if current_budget = 0
+	     return false
+	  if user enters flour
+	     ask how much
+	  elif they dont have enough money
+	     error message
+	  else
+	     update current_flour
+	     deduct money from budget
+	  if they run out of money
+	     return check_items_enough(shopping_cart)
+    (repeat this code for all the ingredients)
+    return check_items_enough(shopping_cart)
+
+def print_task_list (tasks_remaining)
+    for each task in the list
+    	if the index is 0
+	   print 1
+	elif (repeat for indexes 1-3)
+	if the task is dough
+	   print "begin the dough
+	elif (repeat for each task)
+
+def bake()
+    tasks = [dough, macrons, croissants, baguettes]
+    print_task_list (tasks)
+    while there are tasks left
+    	  print_task_list(tasks)
+	  ask the user what they want to do
+	  if they say dough
+	     remove dough
+	  elif they say macrons
+	       if dough is in the list
+	       	  tell them to do the dough first
+	       else
+	          remove macrons
+          elif they say croissants
+	       if dough is in the list
+	       	   tell them to do the dough first
+	       else
+	           remove croissants
+          elif they say baguettes
+	       if the list length is 1
+	       	  remove baguettes
+	       else
+	          tell them to save the baguetes for the end
+    print  "All done"
+
+
+
+if __name__ == "__main__":
+   print shop menu
+   if go_shopping()
+      bake()
